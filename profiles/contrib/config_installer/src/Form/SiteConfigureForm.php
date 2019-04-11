@@ -170,7 +170,7 @@ class SiteConfigureForm extends FormBase {
       $input = \Drush\Drush::redispatchOptions();
       $input += [
         'account-name' => 'admin',
-        'account-pass' => $this->generatePassword(),
+        'account-pass' => \Drush\Utils\StringUtils::generatePassword(),
         'account-mail' => 'admin@example.com',
       ];
       $form['admin_account']['account']['name']['#default_value'] = $input['account-name'];
@@ -231,37 +231,6 @@ class SiteConfigureForm extends FormBase {
       // is used on after installation.
       \Drupal::service('kernel')->invalidateContainer();
     }
-  }
-
-  /**
-   * Generate a random alphanumeric password.  Copied from user.module.
-   *
-   * Copied straight from Drush StringUtils after they are no longer
-   * supported by the new Drush version.
-   *
-   * @param int $length
-   *   Desired password length.
-   *
-   * @return string
-   *   A random alphanumeric password.
-   */
-  private function generatePassword($length = 10) {
-    // This variable contains the list of allowable characters for the
-    // password. Note that the number 0 and the letter 'O' have been
-    // removed to avoid confusion between the two. The same is true
-    // of 'I', 1, and 'l'.
-    $allowable_characters = 'abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789';
-    // Zero-based count of characters in the allowable list:
-    $len = strlen($allowable_characters) - 1;
-    // Declare the password as a blank string.
-    $pass = '';
-    // Loop the number of times specified by $length.
-    for ($i = 0; $i < $length; $i++) {
-      // Each iteration, pick a random character from the
-      // allowable string and append it to the password:
-      $pass .= $allowable_characters[mt_rand(0, $len)];
-    }
-    return $pass;
   }
 
 }
