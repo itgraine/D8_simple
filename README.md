@@ -1,6 +1,6 @@
 # Установленные модуля
 
-composer require drupal/pathauto drupal/admin_toolbar drupal/metatag drupal/devel drupal/webform drupal/redirect drupal/captcha drupal/recaptcha drupal/simple_sitemap drupal/honeypot drupal/colorbox drupal/easy_breadcrumb drupal/token drupal/config_installer
+composer require drupal/pathauto drupal/admin_toolbar drupal/metatag drupal/devel drupal/webform drupal/redirect drupal/captcha drupal/recaptcha drupal/simple_sitemap drupal/honeypot drupal/colorbox drupal/easy_breadcrumb drupal/token drupal/config_installer drupal/slick_views
 
 # Composer template for Drupal projects
 
