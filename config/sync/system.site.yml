@@ -1,0 +1,14 @@
+uuid: d036e5bb-90a9-4783-bb63-9b3d627ce954
+name: D8simple
+mail: info@it-graine.ru
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: ru
+default_langcode: ru
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
