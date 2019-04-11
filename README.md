@@ -1,3 +1,7 @@
+# Установленные модуля
+
+composer require drupal/pathauto drupal/admin_toolbar drupal/metatag drupal/devel drupal/webform drupal/redirect drupal/captcha drupal/recaptcha drupal/simple_sitemap drupal/honeypot drupal/colorbox drupal/easy_breadcrumb drupal/token drupal/config_installer
+
 # Composer template for Drupal projects
 
 [![Build Status](https://travis-ci.org/drupal-composer/drupal-project.svg?branch=8.x)](https://travis-ci.org/drupal-composer/drupal-project)
